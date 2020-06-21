@@ -5,6 +5,10 @@ from .stats import Statistics
 
 IGNORED_FOLDERS = [
     'venv',
+    'build',
+    'dist',
+    'generated',
+    'generated-src',
 ]
 
 
