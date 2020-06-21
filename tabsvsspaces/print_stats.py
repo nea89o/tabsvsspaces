@@ -1,4 +1,4 @@
-from lib.stats import Statistics
+from tabsvsspaces.stats import Statistics
 
 
 def print_stats(stats: Statistics, by_extension: bool):

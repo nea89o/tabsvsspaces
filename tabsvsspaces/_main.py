@@ -1,15 +1,13 @@
-#!/usr/bin/env python3.6
-
 import argparse
 from pathlib import Path
 
-from lib.argparse.pathtype import PathType
-from lib.find_stats import find_stats
-from lib.print_stats import print_stats
-from lib.stats import Statistics
+from tabsvsspaces.pathtype import PathType
+from tabsvsspaces.find_stats import find_stats
+from tabsvsspaces.print_stats import print_stats
+from tabsvsspaces.stats import Statistics
 
 
-def main():
+def main(args=None):
     parser = argparse.ArgumentParser(
         prog='tabsvsspaces',
         description='Shows statistics about the usage of tabs and spaces in a given folder'
@@ -25,13 +23,9 @@ def main():
                         dest='verbose',
                         action='store_true',
                         help='show debug information')
-    ns = parser.parse_args()
+    ns = parser.parse_args(args)
     folder: str = ns.folder
     extension: bool = ns.extension
     verbose: bool = ns.verbose
     stats: Statistics = find_stats(Path(folder), verbose=verbose)
     print_stats(stats, extension)
-
-
-if __name__ == '__main__':
-    main()

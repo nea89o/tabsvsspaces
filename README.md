@@ -1,12 +1,10 @@
 ## Tabs Vs Spaces
+Use this tool to count the amount of spaces versus the amount of tabs in your codebase.
 
 ### Setup
 
 ```bash
-git clone https://github.com/romangraef/tabsvsspaces
-python3.6 -m venv venv
-source venv/bin/activate
-chmod +x main.py
+pip install tabsvsspaces
 ```
 
 ### Usage
@@ -15,3 +13,12 @@ chmod +x main.py
 tabsvsspaces folder
 tabsvsspaces -e folder
 ```
+
+
+### Links
+
+ - [Github][github]
+ - [Issues][issues]
+
+[github]: https://github.com/romangraef/tabsvsspaces
+[issues]: https://github.com/romangraef/tabsvsspaces/issues
